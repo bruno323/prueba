@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container_Login {
+    height: 340px;
+    width: 280px;
+    left: 550px;
+    top:200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #f39c12;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+}
+.container_Logo {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    left: 45px;
+    top: -75px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+.img_Logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.form_container {
+    margin-top: 100px;
+}
+.login_btn {
+    width: 80%;
+    background: #c0392b !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+
+.input_login_user, .input_login_password{
+    margin: 10px;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
