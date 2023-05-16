@@ -2,7 +2,7 @@
 
 class Usuario
 {
-    var $idUsuario
+    var $idUsuario;
     var $nombre;
     var $apellido;
     var $correo;
@@ -12,10 +12,10 @@ class Usuario
 
 
 function __construct($idUsuario,$nombre,$apellido,$correo,$password,$rol){
-    $this->$idUusario=$idUusario;
-    $this->correo=$correo;
+    $this->idUsuario=$idUsuario;
     $this->nombre=$nombre;
     $this->apellido=$apellido;
+    $this->correo=$correo;
     $this->password=$password;
     $this->rol=$rol;
 }

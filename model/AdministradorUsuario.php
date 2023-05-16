@@ -1,6 +1,6 @@
 <?php
 require_once 'AdministradorModelo.php';
-class AdministradorUsuario extends AdministradorModelo{
+class AdministrarUsuario extends AdministrarModelo{
     function loginUsuario($correo){
         $sql="SELECT * FROM usuario WHERE correo=:correo";
         $response = $this->getConexion()->prepare($sql);

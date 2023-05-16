@@ -13,16 +13,15 @@
     }
 
 function updateEstadoUsuario(Usuario $usuario){
-	require_once("../Model/AdministradorUsuario.php");
-	$outputManagment = new AdministradorUsuario();
+	require_once("../model/AdministradorUsuario.php");
+	$outputManagment = new AdministrarUsuario();
 	$outputManagment->updateEstado($usuario->idUsuario,$usuario->estado);
 }
     
 function login(){
-    console.log('1');
     require_once('../model/usuario.php');
     require_once('../model/AdministradorUsuario.php');
-    $outputResponse = new AdministradorUsuario();
+    $outputResponse = new AdministrarUsuario();
     $correo = $_REQUEST['correo'];
     $password = $_REQUEST['password'];
     $data = $outputResponse->loginUsuario($correo);
@@ -33,16 +32,18 @@ function login(){
             $usuario->actualizarEstado(1);
             updateEstadoUsuario($usuario);
             almacenarSesion($usuario);
+            echo json_encode(1);
         }else{
             echo json_encode("la contaseña es incorrecta");
         }
     }else{
-        echo json_encode("el correo ingresado no existe")
+        echo json_encode("el correo ingresado no existe");
     }
 }  
 
 function almacenarSesion(Usuario $usuario){
 	$_SESSION["rol"]=$usuario->rol;
+    $_SESSION["idUsuario"]=$usuario->idUsuario;
 	$_SESSION["nombre"]=$usuario->nombre;
 	$_SESSION["apellido"]=$usuario->apellido;
 	$_SESSION["correo"]=$usuario->correo;
